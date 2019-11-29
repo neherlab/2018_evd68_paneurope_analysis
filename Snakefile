@@ -44,3 +44,16 @@ rule pymol_script:
             --clades {input.cladefile} --mutations {input.mutationfile} \
             --reference {input.ref} --output {output.pymol_script}
         """
+
+rule number_of_mutation_fig:
+    input:
+        treefile = "../enterovirus_d68/genome/results/tree_2018y.nwk",
+        mutationfile = "../enterovirus_d68/genome/results/aa_muts_2018y.json",
+    output:
+        fig_name = "figures/number_of_changes_on_surface.pdf"
+    shell:
+        """
+        python scripts/number_of_changes_on_surface.py --tree {input.treefile} \
+            --mutations {input.mutationfile} --output {output.fig_name}
+        """
+
