@@ -29,3 +29,18 @@ rule lineage_tracking_fig:
             --clades {input.cladefile} --meta {input.metafile} \
             --output {output.fig}
         """
+
+rule pymol_script:
+    input:
+        treefile = "../enterovirus_d68/genome/results/tree_2018y.nwk",
+        cladefile = "../enterovirus_d68/genome/results/clades_2018y.json",
+        mutationfile = "../enterovirus_d68/genome/results/aa_muts_2018y.json",
+        ref = "../enterovirus_d68/genome/config/ev_d68_reference_genome.gb"
+    output:
+        pymol_script = "results/pymol_script_vp1-vp4.pml"
+    shell:
+        """
+        python scripts/make_pymol_file.py --tree {input.treefile} \
+            --clades {input.cladefile} --mutations {input.mutationfile} \
+            --reference {input.ref} --output {output.pymol_script}
+        """
