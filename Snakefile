@@ -57,3 +57,17 @@ rule number_of_mutation_fig:
             --mutations {input.mutationfile} --output {output.fig_name}
         """
 
+rule epitope_changes:
+    input:
+        treefile = "../enterovirus_d68/vp1/results/tree_2018y.nwk",
+        alignment = "../enterovirus_d68/vp1/results/aa_alignment_2018y_VP1.fasta",
+        cladefile = "../enterovirus_d68/vp1/results/clades_2018y.json",
+    output:
+        epitope_changes = "results/epitope_changes.txt"
+    shell:
+        """
+        python scripts/epitope_changes.py --tree {input.treefile} \
+                --alignment {input.alignment} --clades {input.cladefile} \
+                --output {output.epitope_changes}
+        """
+
