@@ -71,3 +71,32 @@ rule epitope_changes:
                 --output {output.epitope_changes}
         """
 
+
+rule skyline:
+     input:
+        tree = "../enterovirus_d68/genome/results/tree_2018y.nwk",
+        aln = "../enterovirus_d68/genome/results/aligned_2018y.fasta",
+        dates = "../enterovirus_d68/genome/results/metadata.tsv"
+     output:
+        skyline = "results/skyline/skyline.tsv"
+     params:
+        outdir = "results/skyline",
+        npoints = 150
+     shell:
+        """
+        treetime --tree {input.tree} --aln {input.aln} --dates {input.dates} --name-column strain --coalescent skyline --n-skyline {params.npoints} --outdir {params.outdir}
+        """
+
+
+rule mugration:
+     input:
+         tree = "../enterovirus_d68/vp1/results/tree_2018y.nwk",
+         meta = "../enterovirus_d68/genome/results/metadata.tsv"
+     output:
+         model = "results/mugration_{attr}/GTR.txt"
+     params:
+         outdir = "results/mugration_{attr}"
+     shell:
+         """
+         treetime mugration --tree {input.tree} --states {input.meta} --attribute {wildcards.attr} --outdir {params.outdir} 
+         """

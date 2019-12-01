@@ -34,6 +34,8 @@ if __name__ == '__main__':
         "VP4":[]
     }
 
+    colors = {"VP1": 'purple', "VP2":"orange", "VP3":"green", "VP4":"blue"}
+
     # fix the VP1 numbering. Shouldn't be necessary after nextstrain uses updated annotation
     surface_exposed_manually['VP1'] = [(b+13, e+13) for b,e in surface_exposed_manually['VP1']]
 
@@ -54,7 +56,9 @@ if __name__ == '__main__':
     fig, axs=plt.subplots(1,1, figsize=(11,2.5))
     offset = 0
     for pi, p in enumerate(['VP4', 'VP2', 'VP3', 'VP1']):
-        axs.plot(np.arange(len(number_of_changes[p]))+offset, number_of_changes[p])
+        axs.plot(np.arange(len(number_of_changes[p]))+offset, number_of_changes[p], c=colors[p])
+        plt.text(0.5*(2*offset+len(number_of_changes[p])),7, p,
+                fontsize=fs,horizontalalignment='center')
 
         for b,e in surface_exposed_manually[p]:
             axs.plot([b+offset, e+offset], [-.5,-.5], lw=8, c="C%d"%pi)
