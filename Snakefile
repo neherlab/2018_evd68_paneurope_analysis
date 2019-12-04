@@ -14,6 +14,7 @@ rule clade_age_fig:
             {output.suppfig_bootstrap} {output.suppfig_perc_age}
         """
 
+# This also creates the genome trees, with only tips inside epidemic periods.
 rule lineage_tracking_fig:
     input:
         treefile = "../enterovirus_d68/genome/results/tree_2018y.nwk",
@@ -98,16 +99,48 @@ rule skyline:
  		 --coalescent skyline --n-skyline {params.npoints} --outdir {params.outdir}
          """
 
+# make a new metadata which only includes 5 countries + 'rest of europe' + 'rest of world'
+# for the traits migration estimation
+# Also makes reduced regions of just 'china' 'europe' 'north_america' and 'rest of world'
+rule meta_reduce_countries:
+    input:
+        meta = "../enterovirus_d68/vp1/results/metadata-ages.tsv"
+    output:
+        meta = "results/reduced_meta.tsv"
+    shell:
+        """
+        Rscript scripts/reduce_metadata_countries.R {input.meta} {output.meta} 
+        """
 
+# Makes the reduced VP1 trees that include only tips from within the epidemic periods.
+rule reduced_vp1_trees:
+    input:
+        treefile = "../enterovirus_d68/vp1/results/tree_2018y.nwk",
+        branchfile = "../enterovirus_d68/vp1/results/branch_lengths_2018y.json",
+        metafile = "../enterovirus_d68/vp1/results/metadata-ages.tsv"
+    output:
+        trees = ["results/2011-9_vp1_tree.nwk", "results/2018-9_vp1_tree.nwk",
+                "results/2014-5_vp1_tree.nwk", "results/2016-7_vp1_tree.nwk"]
+    shell:
+        """
+        python scripts/epidemic_only_trees.py \
+            --tree {input.treefile} --branch-lengths {input.branchfile} \
+            --meta {input.metafile} 
+        """
+
+# Note the trees used for this (produced by lineage_tracking_fig rule) have the tree branches
+# in YEARS !!
+# This uses VP1 trees and data with REDUCED COUNTRIES AND REGIONS
 rule mugration:
-     input:
-         tree = "results/{dset}_genome_tree.nwk",
-         meta = "../enterovirus_d68/genome/results/metadata.tsv"
-     output:
-         model = "results/mugration_{attr}_{dset}/GTR.txt"
-     params:
-         outdir = "results/mugration_{attr}_{dset}"
-     shell:
-         """
-         treetime mugration --tree {input.tree} --states {input.meta} --attribute {wildcards.attr} --outdir {params.outdir} --missing-data nan
-         """
+    input:
+        #ree = "results/{dset}_genome_tree.nwk",
+        tree = rules.reduced_vp1_trees.output.trees,
+        meta = rules.meta_reduce_countries.output.meta
+    output:
+        model = "results/mugration_{attr}_{dset}/GTR.txt"
+    params:
+        outdir = "results/mugration_{attr}_{dset}"
+    shell:
+        """
+        treetime mugration --tree {input.tree} --states {input.meta} --attribute {wildcards.attr} --outdir {params.outdir} --missing-data nan
+        """
