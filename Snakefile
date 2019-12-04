@@ -1,6 +1,9 @@
 # This should include rules for making the figures for the
 # Europe EV-D68 2018 paper
 
+source activate evd68-paper
+module load R
+
 rule clade_age_fig:
     input:
         auspice_tree = "../enterovirus_d68/vp1/results/metadata_subgenotype_2018y.tsv"
