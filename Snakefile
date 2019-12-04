@@ -145,8 +145,8 @@ rule reduced_vp1_trees:
 # This uses VP1 trees and data with REDUCED COUNTRIES AND REGIONS
 rule mugration:
     input:
-        #ree = "results/{dset}_genome_tree.nwk",
-        tree = rules.reduced_vp1_trees.output.trees,
+        tree = "results/{dset}_vp1_tree.nwk",
+        #tree = rules.reduced_vp1_trees.output.trees,
         meta = rules.meta_reduce_countries.output.meta
     output:
         model = "results/mugration_{attr}_{dset}/GTR.txt"
