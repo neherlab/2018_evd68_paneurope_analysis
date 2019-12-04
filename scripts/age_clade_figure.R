@@ -7,6 +7,12 @@ outFile = args[2]
 suppFigBoot = args[3]
 suppFigClade = args[4]
 
+#setwd("C:/Users/Emma/bash/github/2018_evd68_paneurope_analysis")
+#inFile = "../enterovirus_d68/vp1/results/metadata_subgenotype_2018y.tsv"
+#outFile = "figures/age_clade_plot-fig3.pdf"
+#suppFigBoot = "figures/supp-BootstrapAgeDist.pdf"
+#suppFigClade = "figures/supp-age_by_clade.pdf"
+
 agedat <- read.csv(inFile, sep="\t", as.is=T)
 
 

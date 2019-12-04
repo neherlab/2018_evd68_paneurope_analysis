@@ -4,7 +4,7 @@
 # Do these things before trying to run this snakefile....
 #source activate evd68-paper
 #module load R
-#module load Biopython
+#module load Biopython #OR MAYBE NOT THIS ONE??? seems to break augur
 #CAN'T BE LOADED AT SAME TIME, I DUNNO, WHATEVER
 
 #the conda environment must contain snakemake, augur v6,
@@ -146,7 +146,6 @@ rule reduced_vp1_trees:
 rule mugration:
     input:
         tree = "results/{dset}_vp1_tree.nwk",
-        #tree = rules.reduced_vp1_trees.output.trees,
         meta = rules.meta_reduce_countries.output.meta
     output:
         model = "results/mugration_{attr}_{dset}/GTR.txt"
