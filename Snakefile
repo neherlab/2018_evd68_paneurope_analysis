@@ -30,6 +30,16 @@ rule lineage_tracking_fig:
             --output {output.fig}
         """
 
+rule supp_sample_date_fig: #INPUT FILE MAY NEED UPDATING IN FUTURE!
+    input:
+        swedish_meta = "../enterovirus_d68/data/20190611_Karolinska-region.csv"
+    output:
+        fig = "figures/supp-sampleHist.pdf"
+    shell:
+        """
+        Rscript scripts/2018_sampleDate_hist.r {input.swedish_meta} {output.fig} 
+        """
+
 rule pymol_script:
     input:
         treefile = "../enterovirus_d68/genome/results/tree_2018y.nwk",
