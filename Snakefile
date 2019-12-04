@@ -1,8 +1,12 @@
 # This should include rules for making the figures for the
 # Europe EV-D68 2018 paper
 
-source activate evd68-paper
-module load R
+# Do these things before trying to run this snakefile....
+#source activate evd68-paper
+#module load R
+#module load Biopython
+
+#the conda environment must contain snakemake and the latest version of TreeTime to work.
 
 rule clade_age_fig:
     input:
