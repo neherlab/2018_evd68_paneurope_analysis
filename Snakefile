@@ -5,8 +5,13 @@
 #source activate evd68-paper
 #module load R
 #module load Biopython
+#CAN'T BE LOADED AT SAME TIME, I DUNNO, WHATEVER
 
-#the conda environment must contain snakemake and the latest version of TreeTime to work.
+#the conda environment must contain snakemake, augur v6,
+# and the latest version of TreeTime to work.
+
+# before installing augur do (augur isntall of bcbio won't work)
+# pip install bcbio-gff
 
 rule clade_age_fig:
     input:
@@ -151,3 +156,14 @@ rule mugration:
         """
         treetime mugration --tree {input.tree} --states {input.meta} --attribute {wildcards.attr} --outdir {params.outdir} --missing-data nan
         """
+
+rule mugration_all:
+    input:
+        "results/mugration_country_2014-5/GTR.txt",
+        "results/mugration_country_2016-7/GTR.txt",
+        "results/mugration_country_2018-9/GTR.txt",
+        "results/mugration_country_2011-9/GTR.txt",
+        "results/mugration_region_2014-5/GTR.txt",
+        "results/mugration_region_2016-7/GTR.txt",
+        "results/mugration_region_2018-9/GTR.txt",
+        "results/mugration_region_2011-9/GTR.txt"
