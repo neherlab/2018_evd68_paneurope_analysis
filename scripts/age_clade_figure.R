@@ -170,7 +170,9 @@ agedat <- cbind(agedat, year)
 
 evenYear <- agedat[which(agedat$year %in% wantyears),]
 evenYear$age_range1 <- as.factor(evenYear$age_range1)
-evenYear$age_range1 <- factor(evenYear$age_range1, levels(evenYear$age_range1)[c(5,2,4,3,6,1)])
+#evenYear$age_range1 <- factor(evenYear$age_range1, levels(evenYear$age_range1)[c(5,2,4,3,6,1)])
+summary(as.factor(evenYear$age_range1))
+evenYear$age_range1 <- factor(evenYear$age_range1, levels=c("<1y","1-5y","6-17y","18-64y",">=65y",""))
 counts <- table(evenYear$age_range1, evenYear$year)
 counts <- prop.table(counts, margin=2)*100
 ageCol <- c("#d7191c", "#fdae61", "#ffd11a", "#abd9e9", "#2c7bb6", "white")
@@ -322,12 +324,17 @@ cat("###########################\n")
 summary(lm((evenYear$age~as.factor(evenYear$year))))
 cat("###########################\n")
 
+evenYear$year <- factor(as.factor(evenYear$year), levels=c("2016","2014","2018"))
+summary(lm((evenYear$age~evenYear$year)))
+cat("###########################\n")
+
 ###########################################
 #### Supp graph - plot age_range1 % per clade
 ###########################################
 
 cMeta$age_range1 <- as.factor(cMeta$age_range1)
-cMeta$age_range1 <- factor(cMeta$age_range1, levels(cMeta$age_range1)[c(4,1,3,2,5)])
+#cMeta$age_range1 <- factor(cMeta$age_range1, levels(cMeta$age_range1)[c(4,1,3,2,5)])
+cMeta$age_range1 <- factor(cMeta$age_range1, levels=c("<1y","1-5y","6-17y","18-64y",">=65y")) 
 
 ageClade <- prop.table(table(cMeta$age_range1, cMeta$subgenogroup), margin=2)*100
 ageCol2 <- c("#d7191c", "#fdae61", "#ffd11a", "#abd9e9", "#2c7bb6")

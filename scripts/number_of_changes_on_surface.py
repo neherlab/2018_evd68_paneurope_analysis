@@ -61,7 +61,7 @@ if __name__ == '__main__':
                 fontsize=fs,horizontalalignment='center')
 
         for b,e in surface_exposed_manually[p]:
-            axs.plot([b+offset, e+offset], [-.5,-.5], lw=8, c="C%d"%pi)
+            axs.plot([b+offset, e+offset], [-.5,-.5], lw=8, c=colors[p])#"C%d"%pi)
 
         offset += gene_length[p]
 
