@@ -1,5 +1,6 @@
 from Bio import Phylo, SeqIO, AlignIO
 import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
 import numpy as np
 import json
 
@@ -56,8 +57,12 @@ if __name__ == '__main__':
     fig, axs=plt.subplots(1,1, figsize=(11,2.5))
     offset = 0
     for pi, p in enumerate(['VP4', 'VP2', 'VP3', 'VP1']):
+        if p=="VP1":
+            axs.add_patch(Rectangle((89+offset,0), 14, 10, ec='silver', fc='silver', linewidth=2))
+            axs.add_patch(Rectangle((140+offset,0), 13, 10, ec='silver', fc='silver', linewidth=2))
+            axs.add_patch(Rectangle((279+offset,0), 30, 10, ec='silver', fc='silver', linewidth=2))
         axs.plot(np.arange(len(number_of_changes[p]))+offset, number_of_changes[p], c=colors[p])
-        plt.text(0.5*(2*offset+len(number_of_changes[p])),7, p,
+        plt.text(0.5*(2*offset+len(number_of_changes[p])) + (50 if p=='VP1' else 0),7, p,
                 fontsize=fs,horizontalalignment='center')
 
         for b,e in surface_exposed_manually[p]:
