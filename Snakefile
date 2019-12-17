@@ -50,7 +50,7 @@ rule supp_sample_date_fig: #INPUT FILE MAY NEED UPDATING IN FUTURE!
         fig = "figures/supp-sampleHist.pdf"
     shell:
         """
-        Rscript scripts/2018_sampleDate_hist.r {input.swedish_meta} {output.fig} 
+        Rscript scripts/2018_sampleDate_hist.r {input.swedish_meta} {output.fig}
         """
 
 rule pymol_script:
@@ -80,21 +80,33 @@ rule number_of_mutation_fig:
             --mutations {input.mutationfile} --output {output.fig_name}
         """
 
-rule epitope_changes:
+rule epitope_changes_vp1:
     input:
         treefile = "../enterovirus_d68/vp1/results/tree_2018y.nwk",
         alignment = "../enterovirus_d68/vp1/results/aa_alignment_2018y_VP1.fasta",
         cladefile = "../enterovirus_d68/vp1/results/clades_2018y.json",
     output:
-        epitope_changes = "results/epitope_changes.txt"
+        epitope_changes = "results/epitope_changes_vp1.txt"
     shell:
         """
-        python scripts/epitope_changes.py --tree {input.treefile} \
+        python scripts/epitope_changes_vp1.py --tree {input.treefile} \
                 --alignment {input.alignment} --clades {input.cladefile} \
                 --output {output.epitope_changes}
         """
 
-
+rule epitope_changes_vp2:
+    input:
+        treefile = "../enterovirus_d68/genome/results/tree_2018y.nwk",
+        alignment = "../enterovirus_d68/genome/results/aa_alignment_2018y_VP2.fasta",
+        cladefile = "../enterovirus_d68/genome/results/clades_2018y.json",
+    output:
+        epitope_changes = "results/epitope_changes_vp2.txt"
+    shell:
+        """
+        python scripts/epitope_changes_vp2.py --tree {input.treefile} \
+                --alignment {input.alignment} --clades {input.cladefile} \
+                --output {output.epitope_changes}
+        """
 rule skyline:
      input:
          tree = "results/2011-9_genome_tree.nwk",
@@ -121,7 +133,7 @@ rule meta_reduce_countries:
         meta = "results/reduced_meta.tsv"
     shell:
         """
-        Rscript scripts/reduce_metadata_countries.R {input.meta} {output.meta} 
+        Rscript scripts/reduce_metadata_countries.R {input.meta} {output.meta}
         """
 
 # Makes the reduced VP1 trees that include only tips from within the epidemic periods.
@@ -137,7 +149,7 @@ rule reduced_vp1_trees:
         """
         python scripts/epidemic_only_trees.py \
             --tree {input.treefile} --branch-lengths {input.branchfile} \
-            --meta {input.metafile} 
+            --meta {input.metafile}
         """
 
 # Note the trees used for this (produced by lineage_tracking_fig rule) have the tree branches
