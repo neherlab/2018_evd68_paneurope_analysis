@@ -107,6 +107,23 @@ rule epitope_changes_vp2:
                 --alignment {input.alignment} --clades {input.cladefile} \
                 --output {output.epitope_changes}
         """
+
+rule epitope_trajectories:
+    input:
+        treefile = "../enterovirus_d68/genome/results/tree_2018y.nwk",
+        mutations = "../enterovirus_d68/genome/results/aa_muts_2018y.json",
+        cladefile = "../enterovirus_d68/genome/results/clades_2018y.json",
+        branchlengths = "../enterovirus_d68/genome/results/branch_lengths_2018y.json",
+    output:
+        epitope_changes = "figures/mutation_count_trajectories.pdf"
+    shell:
+        """
+        python scripts/epitope_changes_along_tree.py --tree {input.treefile} \
+                --mutations {input.mutations} --clades {input.cladefile} --branch-lengths {input.branchlengths}\
+                --output {output.epitope_changes}
+        """
+
+
 rule skyline:
      input:
          tree = "results/2011-9_genome_tree.nwk",
