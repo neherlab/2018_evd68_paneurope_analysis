@@ -99,66 +99,66 @@ if __name__ == '__main__':
 
 
     pymol_script = \
-    f"""
-    fetch 4wm8, type=pdb1, multiplex=1
-    split_state 4wm8
-    {delete_str}
+f"""
+fetch 4wm8, type=pdb1, multiplex=1
+split_state 4wm8
+{delete_str}
 
-    orient
+orient
 
-    hide everything
+hide everything
 
-    sele vp1_1, 4wm8_0001 and chain A
-    sele vp2_1, 4wm8_0001 and chain B
-    sele vp3_1, 4wm8_0001 and chain C
-    sele vp4_1, 4wm8_0001 and chain D
+sele vp1_1, 4wm8_0001 and chain A
+sele vp2_1, 4wm8_0001 and chain B
+sele vp3_1, 4wm8_0001 and chain C
+sele vp4_1, 4wm8_0001 and chain D
 
-    sele vp1_2, 4wm8_0002 and chain A
-    sele vp2_2, 4wm8_0002 and chain B
-    sele vp3_2, 4wm8_0002 and chain C
-    sele vp4_2, 4wm8_0002 and chain D
+sele vp1_2, 4wm8_0002 and chain A
+sele vp2_2, 4wm8_0002 and chain B
+sele vp3_2, 4wm8_0002 and chain C
+sele vp4_2, 4wm8_0002 and chain D
 
-    sele vp1_3, 4wm8_0003 and chain A
-    sele vp2_3, 4wm8_0003 and chain B
-    sele vp3_3, 4wm8_0003 and chain C
-    sele vp4_3, 4wm8_0003 and chain D
+sele vp1_3, 4wm8_0003 and chain A
+sele vp2_3, 4wm8_0003 and chain B
+sele vp3_3, 4wm8_0003 and chain C
+sele vp4_3, 4wm8_0003 and chain D
 
-    sele vp1_4, 4wm8_0004 and chain A
-    sele vp2_4, 4wm8_0004 and chain B
-    sele vp3_4, 4wm8_0004 and chain C
-    sele vp4_4, 4wm8_0004 and chain D
+sele vp1_4, 4wm8_0004 and chain A
+sele vp2_4, 4wm8_0004 and chain B
+sele vp3_4, 4wm8_0004 and chain C
+sele vp4_4, 4wm8_0004 and chain D
 
-    sele vp1_5, 4wm8_0005 and chain A
-    sele vp2_5, 4wm8_0005 and chain B
-    sele vp3_5, 4wm8_0005 and chain C
-    sele vp4_5, 4wm8_0005 and chain D
+sele vp1_5, 4wm8_0005 and chain A
+sele vp2_5, 4wm8_0005 and chain B
+sele vp3_5, 4wm8_0005 and chain C
+sele vp4_5, 4wm8_0005 and chain D
 
-    sele BC_loop, 4wm8_0005 and chain A and resi {BC_loop}
-    sele DE_loop, 4wm8_0005 and chain A and resi {DE_loop}
-    sele EVd68_epi, 4wm8_0005 and chain A and resi {EVd68_epi}
+sele BC_loop, 4wm8_0005 and chain A and resi {BC_loop}
+sele DE_loop, 4wm8_0005 and chain A and resi {DE_loop}
+sele EVd68_epi, 4wm8_0005 and chain A and resi {EVd68_epi}
 
-    show surface, 4wm8_0001
-    show surface, 4wm8_0002
-    show surface, 4wm8_0003
-    show surface, 4wm8_0004
-    show surface, 4wm8_0005
+show surface, 4wm8_0001
+show surface, 4wm8_0002
+show surface, 4wm8_0003
+show surface, 4wm8_0004
+show surface, 4wm8_0005
 
-    color gray40, 4wm8_0002
-    color gray40, 4wm8_0004
-    color gray80, 4wm8_0005
+color gray40, 4wm8_0002
+color gray40, 4wm8_0004
+color gray80, 4wm8_0005
 
-    color teal, BC_loop
-    color teal, DE_loop
-    color teal, EVd68_epi
+color teal, BC_loop
+color teal, DE_loop
+color teal, EVd68_epi
 
-    color deeppurple, vp1_1
-    color sand, vp2_1
-    color forest, vp3_1
-    color gray, vp4_1
+color deeppurple, vp1_1
+color sand, vp2_1
+color forest, vp3_1
+color gray, vp4_1
 
-    {diff_color_str}
+{diff_color_str}
 
-    """
+"""
 
     with open(args.output, 'w') as fh:
         fh.write(pymol_script)
