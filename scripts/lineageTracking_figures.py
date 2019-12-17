@@ -250,6 +250,22 @@ if __name__ == '__main__':
                 "2011-9": 'C3',
                 "2011-9_west": 'C3'}
 
+    for epis in ['2014-5', '2016-7', '2018-9']:
+        #epis = '2014-5'
+        endT = sampSets[epis]['endTime']
+        yrsB2 = [abs(x-(endT-2)) for x in sampSets[epis]['time']]
+        actYr2 = sampSets[epis]['time'][yrsB2.index(min(yrsB2))]
+        ln2Yrs = sampSets[epis]['lineages'][yrsB2.index(min(yrsB2))]
+        yrsB4 = [abs(x-(endT-4)) for x in sampSets[epis]['time']]
+        actYr4 = sampSets[epis]['time'][yrsB4.index(min(yrsB4))]
+        ln4Yrs = sampSets[epis]['lineages'][yrsB4.index(min(yrsB4))]
+
+        rlt = "{}:\n\t 2 yrs before:\t{}\t{}\n\t 4 yrs before:\t{}\t{}".format(epis, actYr2,ln2Yrs,actYr4,ln4Yrs)
+        print(rlt)
+
+
+    #import ipdb; ipdb.set_trace()
+
     sliding_window = True
     window_size = 2 #in months - 1 month or 2 months. If sliding window, will slide by 1/2 month and 1 month, respectively
 
