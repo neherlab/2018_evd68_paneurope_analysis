@@ -126,19 +126,46 @@ rule epitope_trajectories:
 
 rule skyline:
      input:
-         tree = "results/2011-9_genome_tree.nwk",
+         tree = "../enterovirus_d68/genome/results/raw_tree_2018y.nwk",
          aln = "../enterovirus_d68/genome/results/aligned_2018y.fasta",
          dates = "../enterovirus_d68/genome/results/metadata.tsv"
      output:
-         skyline = "results/skyline/skyline.tsv"
+         figure = "figures/skyline.pdf"
      params:
-         outdir = "results/skyline",
-         npoints = 150
-     shell:
-         """
-         treetime --tree {input.tree} --aln {input.aln} --dates {input.dates} --name-column strain \
- 		 --coalescent skyline --n-skyline {params.npoints} --outdir {params.outdir}
-         """
+         n_points = 150,
+         name_col = 'strain'
+     run:
+        from treetime import TreeTime
+        from treetime.utils import parse_dates
+        from matplotlib import pyplot as plt
+
+        d = parse_dates(input.dates, name_col=params.name_col)
+        tt = TreeTime(tree=input.tree, aln=input.aln, dates=d, verbose=3)
+        tt.run(root='best', Tc='const', max_iter=2)
+
+        tt.merger_model.optimize_skyline(n_points=params.n_points)
+        sl_opt_150, conf = tt.merger_model.skyline_inferred(confidence=2, gen=50)
+
+        fs=16
+        plt.figure()
+        ax=plt.subplot()
+        plt.fill_between(sl_opt_150.x, conf[0], conf[1], color=(0.8, 0.8, 0.8))
+        plt.plot(sl_opt_100.x, sl_opt_100.y, label='maximum likelihood skyline', lw=2)
+        plt.ticklabel_format(axis='x',useOffset=False)
+        plt.yscale('log')
+
+        for i in range(2010,2020):
+                plt.plot([i,i], [10,10000], c='k', alpha=0.3, lw=2)
+
+        plt.ylim([100,10000])
+        plt.xlim([2010,2019.5])
+        plt.tick_params(labelsize=0.7*fs,)
+        for label in ax.xaxis.get_ticklabels():
+            label.set_horizontalalignment('left')
+        plt.ylabel('inverse coalescent rate (N_e)', fontsize=fs)
+        plt.xlabel('year', fontsize=fs)
+        plt.savefig(output.figure)
+
 
 # make a new metadata which only includes 5 countries + 'rest of europe' + 'rest of world'
 # for the traits migration estimation
