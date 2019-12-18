@@ -76,18 +76,26 @@ if __name__ == '__main__':
 
 
     fs=16
-    fig, axs = plt.subplots(3,1, sharex=True, figsize=(8,14))
+    fig, axs = plt.subplots(3,1, figsize=(7.5,11)) #, sharex=True)
+    plt.tight_layout()
+    [axs[0].axvline(xs, color="gainsboro", linestyle="-") for xs in [1990,1995,2000,2005,2010,2015,2020]]
+    [axs[0].axhline(xs, color="silver", linestyle=":") for xs in [0,1,2,3,4,5,6]]
+    [axs[1].axvline(xs, color="gainsboro", linestyle="-") for xs in [1990,1995,2000,2005,2010,2015,2020]]
+    [axs[1].axhline(xs, color="silver", linestyle=":") for xs in [0,1,2,3]]
+    [axs[2].axvline(xs, color="gainsboro", linestyle="-") for xs in [1990,1995,2000,2005,2010,2015,2020]]
+    [axs[2].axhline(xs, color="silver", linestyle=":") for xs in [0,2,4,6,8]]
+
     for ci,clade in enumerate(clades_to_label):
         nmuts = 0.08*(ci-1.5) + np.array([np.mean(x) for x in traj['BC'][clade]])
         axs[0].plot(time_points, nmuts, label=clade, lw=3, c=colors[clade])
 
-    axs[0].set_ylabel('Cumulative mutations in the BC loop', fontsize=fs)
+    axs[0].set_ylabel('Cumulative mutations\nin the BC loop', fontsize=fs)
     for ci,clade in enumerate(clades_to_label):
         nmuts = 0.08*(ci-1.5) + np.array([np.mean(x) for x in traj['DE'][clade]])
         axs[1].plot(time_points, nmuts, label=clade, lw=3, c=colors[clade])
 
     axs[1].set_yticks([0,1,2,3])
-    axs[1].set_ylabel('Cumulative mutations in the DE loop', fontsize=fs)
+    axs[1].set_ylabel('Cumulative mutations\nin the DE loop', fontsize=fs)
     for ci,clade in enumerate(clades_to_label):
         nmuts = 0.08*(ci-1.5) + np.array([np.mean(x) + np.mean(y) for x,y in zip(traj['BC'][clade],traj['DE'][clade])])
         axs[2].plot(time_points, nmuts, label=clade, lw=3, c=colors[clade])

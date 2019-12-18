@@ -115,7 +115,7 @@ rule epitope_trajectories:
         cladefile = "../enterovirus_d68/genome/results/clades_2018y.json",
         branchlengths = "../enterovirus_d68/genome/results/branch_lengths_2018y.json",
     output:
-        epitope_changes = "figures/mutation_count_trajectories.pdf"
+        epitope_changes = "figures/supp_mutation_count_trajectories.pdf"
     shell:
         """
         python scripts/epitope_changes_along_tree.py --tree {input.treefile} \
