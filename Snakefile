@@ -125,16 +125,16 @@ rule epitope_trajectories:
 
 
 rule skyline:
-     input:
-         tree = "../enterovirus_d68/genome/results/raw_tree_2018y.nwk",
-         aln = "../enterovirus_d68/genome/results/aligned_2018y.fasta",
-         dates = "../enterovirus_d68/genome/results/metadata.tsv"
-     output:
-         figure = "figures/skyline.pdf"
-     params:
-         n_points = 150,
-         name_col = 'strain'
-     run:
+    input:
+        tree = "../enterovirus_d68/genome/results/raw_tree_2018y.nwk",
+        aln = "../enterovirus_d68/genome/results/aligned_2018y.fasta",
+        dates = "../enterovirus_d68/genome/results/metadata.tsv"
+    output:
+        figure = "figures/skyline.pdf"
+    params:
+        n_points = 150,
+        name_col = 'strain'
+    run:
         from treetime import TreeTime
         from treetime.utils import parse_dates
         from matplotlib import pyplot as plt
@@ -144,24 +144,25 @@ rule skyline:
         tt.run(root='best', Tc='const', max_iter=2)
 
         tt.merger_model.optimize_skyline(n_points=params.n_points)
-        sl_opt_150, conf = tt.merger_model.skyline_inferred(confidence=2, gen=50)
+        sl_opt, conf = tt.merger_model.skyline_inferred(confidence=2, gen=50)
 
         fs=16
-        plt.figure()
+        plt.figure(figsize=(14,6))
         ax=plt.subplot()
-        plt.fill_between(sl_opt_150.x, conf[0], conf[1], color=(0.8, 0.8, 0.8))
-        plt.plot(sl_opt_100.x, sl_opt_100.y, label='maximum likelihood skyline', lw=2)
+        plt.fill_between(sl_opt.x, conf[0], conf[1], color=(0.8, 0.8, 0.8))
+        plt.plot(sl_opt.x, sl_opt.y, label='maximum likelihood skyline', lw=2)
         plt.ticklabel_format(axis='x',useOffset=False)
         plt.yscale('log')
 
         for i in range(2010,2020):
-                plt.plot([i,i], [10,10000], c='k', alpha=0.3, lw=2)
+            plt.plot([i,i], [10,10000], c='k', alpha=0.3, lw=2)
 
         plt.ylim([100,10000])
         plt.xlim([2010,2019.5])
         plt.tick_params(labelsize=0.7*fs,)
         for label in ax.xaxis.get_ticklabels():
             label.set_horizontalalignment('left')
+
         plt.ylabel('inverse coalescent rate (N_e)', fontsize=fs)
         plt.xlabel('year', fontsize=fs)
         plt.savefig(output.figure)
