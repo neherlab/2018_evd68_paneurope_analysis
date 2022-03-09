@@ -5,9 +5,6 @@ from collections import defaultdict
 import numpy as np
 import json
 
-from treetime.treeanc import mutations
-
-
 if __name__ == '__main__':
     import argparse
     parser = parser = argparse.ArgumentParser(description='assemble a script for pymol',
