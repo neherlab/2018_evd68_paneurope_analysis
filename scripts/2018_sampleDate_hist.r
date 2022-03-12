@@ -56,3 +56,4 @@ x <- barplot(sampCnts, beside=T, xlab="Week Beginning", ylab="# of Samples",
 labs <- colnames(sampCnts)
 text(cex=1, x=colMeans(x)+1.25, y=-0.55, labs, xpd=T, srt=-45)
 dev.off()
+
