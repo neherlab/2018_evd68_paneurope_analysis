@@ -55,14 +55,16 @@ if __name__ == '__main__':
                             codon_changes_nonsyn[(pname, codon_pos)].append((anc_codon, der_codon))
 
 
+    fs = 15
     plt.figure()
     plt.hist([len(x) for x in codon_changes_syn.values()], bins=range(25), density=True, alpha=0.6, label='synonymous')
     plt.hist([len(x) for x in codon_changes_nonsyn.values()], bins=range(25), density=True, alpha=0.6, label='non-synonymous')
     # plt.yscale('log')
-    plt.xlabel('number of mutations per codon')
-    plt.ylabel('distribution')
-    plt.legend()
-    plt.savefig('syn_vs_nonsyn.png')
+    plt.xlabel('number of mutations per codon',fontsize=fs)
+    plt.ylabel('distribution',fontsize=fs)
+    plt.tick_params(labelsize=0.8*fs)
+    plt.legend(fontsize=fs)
+    plt.savefig('syn_vs_nonsyn.pdf')
 
     codon_changes_nonsyn_sorted = [x for x in sorted(codon_changes_nonsyn.items(), key=lambda x:len(x[1])) #/(len(x[1]) + len(codon_changes_syn[x[0]])))
                                    if x[0][0]=='VP1']
@@ -81,10 +83,11 @@ if __name__ == '__main__':
     plt.scatter( [length-sorted_indices_rev[p] for p in DE_positions], [len(codon_changes_nonsyn[(gene, pos)]) for pos in DE_positions], c='C2', label='DE-loop')
     # C_term_positions = range(10)
     # plt.scatter([len(codon_changes_nonsyn[(gene, pos)]) for pos in C_term_positions], [length-sorted_indices_rev[p] for p in C_term_positions], c='C3', label='C-terminus')
-    plt.legend()
-    plt.ylabel('number of non-synonymous mutations')
-    plt.xlabel(f'rank within {gene}')
-    plt.savefig('vp1_nonsyn_stats.png')
+    plt.legend(fontsize=fs)
+    plt.ylabel('number of non-synonymous mutations',fontsize=fs)
+    plt.xlabel(f'variability rank within {gene}',fontsize=fs)
+    plt.tick_params(labelsize=0.8*fs)
+    plt.savefig('vp1_nonsyn_stats.pdf')
 
     plt.figure()
     plt.hist([len(x) for n,x in codon_changes_nonsyn.items() if n[0]==gene], bins=range(0,24,3))
