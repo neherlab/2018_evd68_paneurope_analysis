@@ -1,11 +1,11 @@
 # This should include rules for making the figures for the
 # Europe EV-D68 2018 paper
 
-# Do these things before trying to run this snakefile....
+# Do these things before trying to run this snakefile.... (if on scicore)
 #source activate evd68-paper
 #module load R
-#module load Biopython #OR MAYBE NOT THIS ONE??? seems to break augur
-#CAN'T BE LOADED AT SAME TIME, I DUNNO, WHATEVER
+#module load Biopython
+#CAN'T BE LOADED AT SAME TIME
 
 #the conda environment must contain snakemake, augur v6,
 # and the latest version of TreeTime to work.
