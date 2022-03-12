@@ -1,0 +1,713 @@
+{
+  "annotations": {
+    "2A": {
+      "end": 3756,
+      "start": 3315,
+      "strand": 1
+    },
+    "2B": {
+      "end": 4053,
+      "start": 3756,
+      "strand": 1
+    },
+    "2C": {
+      "end": 5043,
+      "start": 4053,
+      "strand": 1
+    },
+    "3A": {
+      "end": 5310,
+      "start": 5043,
+      "strand": 1
+    },
+    "3B": {
+      "end": 5376,
+      "start": 5310,
+      "strand": 1
+    },
+    "3C": {
+      "end": 5925,
+      "start": 5376,
+      "strand": 1
+    },
+    "3D": {
+      "end": 7296,
+      "start": 5925,
+      "strand": 1
+    },
+    "VP1": {
+      "end": 3315,
+      "start": 2388,
+      "strand": 1
+    },
+    "VP2": {
+      "end": 1683,
+      "start": 939,
+      "strand": 1
+    },
+    "VP3": {
+      "end": 2388,
+      "start": 1683,
+      "strand": 1
+    },
+    "VP4": {
+      "end": 939,
+      "start": 732,
+      "strand": 1
+    },
+    "nuc": {
+      "end": 7367,
+      "start": 0,
+      "strand": 1
+    }
+  },
+  "author_info": {
+    "Agoti, C., Phan, M., et al": {
+      "n": 4,
+      "title": "Genomic analysis of respiratory syncytial virus infections in households and utility in inferring who infects the infant"
+    },
+    "Arunkumar, G. et al.": {
+      "n": 1,
+      "title": "A report on Enterovirus D68 associated viral pneumonia in children from south India 2017"
+    },
+    "Baggen,J., Thibaut,H.J., Staring,J., Jae,L.T., Liu,Y., Guo,H., Slager,J.J., de Bruin,J.W., van Vliet,A.L., Blomen,V.A., Overduin,P., Sheng,J., de Haan Xander,C.A., de Vries,E., Meijer,A., Rossmann,M.G., Brummelkamp,T.R. and van Kuppeveld,F.J.": {
+      "n": 8,
+      "title": "Enterovirus D68 receptor requirements unveiled by haploid genetics"
+    },
+    "Bal, A. et al.": {
+      "n": 14,
+      "title": "Emergence of enterovirus D68 clade D1, France, August to November 2018"
+    },
+    "Brown,B.A., Nix,W.A., Sheth,M., Frace,M. and Oberste,M.S.": {
+      "n": 8,
+      "title": "Next-generation sequencing of Enterovirus D68"
+    },
+    "Chaimongkol,N., Okamoto,M., Furuse,Y., Nishimura,H. and Oshitani,H.": {
+      "n": 10,
+      "title": "Evolution and Genetic variability of human enterovirus D68: population dynamic in Asia"
+    },
+    "Chen,L., Shi,L., Yang,H., Gu,D.Y., Meng,J., Xu,Y.Q., Yao,X.J., Zhang,H.L., Cheng,J.Q., Ma,H.W., Zhang,R.L. and He,Y.Q.": {
+      "n": 4,
+      "title": "Identification and Whole-Genome Sequencing of Four Enterovirus D68 Strains in Southern China in Late 2015"
+    },
+    "Chien,Y.S. and Lee,M.S.": {
+      "n": 1,
+      "title": "Direct Submission"
+    },
+    "Chiu,C.Y., Yu,G., Naccache,S.N., Clayton,A., Yagi,S. and Glaser,C.": {
+      "n": 3,
+      "title": "Whole-genome deep sequencing of enterovirus D68 strains in cases of acute flaccid paralysis in California"
+    },
+    "Das,S.R., Fedorova,N., Puri,V., Stockwell,T., Shrivastava,S., Amedeo,P., Shabman,R., Jackson,D.J. and Gern,J.E.": {
+      "n": 7,
+      "title": "Direct Submission"
+    },
+    "Das,S.R., Halpin,R.A., Akopov,A., Fedorova,N., Puri,V., Stockwell,T., Amedeo,P., Bishop,B., Katzel,D., Schobel,S., Shrivastava,S., Jackson,D.J. and Gern,J.E.": {
+      "n": 64,
+      "title": "Direct Submission"
+    },
+    "Das,S.R., Halpin,R.A., Lin,X., Akopov,A., Fedorova,N., Puri,V., Stockwell,T., Amedeo,P., Katzel,D., Schobel,S., Shrivastava,S. and Selvarangan,R.": {
+      "n": 34,
+      "title": "Direct Submission"
+    },
+    "Das,S.R., Halpin,R.A., Lin,X., Akopov,A., Fedorova,N., Puri,V., Stockwell,T., Amedeo,P., Katzel,D., Schobel,S., Shrivastava,S. and Smole,S.": {
+      "n": 36,
+      "title": "Direct Submission"
+    },
+    "Das,S.R., Halpin,R.A., Lin,X., Simenauer,A., Akopov,A., Fedorova,N., Puri,V., Stockwell,T., Amedeo,P., Bishop,B., Katzel,D., Schobel,S., Shrivastava,S., Chappell,J. and Hartert,T.": {
+      "n": 1,
+      "title": "Direct Submission"
+    },
+    "Das,S.R., Halpin,R.A., Lin,X., Simenauer,A., Akopov,A., Fedorova,N., Puri,V., Stockwell,T., Amedeo,P., Bishop,B., Katzel,D., Schobel,S., Shrivastava,S., Schuster,J. and Selvarangan,R.": {
+      "n": 57,
+      "title": "Direct Submission"
+    },
+    "Dyrdak, R. CI, et al.": {
+      "n": 8,
+      "title": "XXX"
+    },
+    "Dyrdak, R. et al.": {
+      "n": 102,
+      "title": "XXX"
+    },
+    "Dyrdak, R., CI, et al.": {
+      "n": 1,
+      "title": "XXX"
+    },
+    "Eshaghi,A., Li,A., Banh,P., Patel,S.N. and Gubbay,J.B.": {
+      "n": 2,
+      "title": "Sep23 2015-Evolutionary history of Enterovirus D68 during the 2014 outbreak in Ontario Canada"
+    },
+    "Essaidi-Laziosi,M., Brito,F., Benaoudia,S., Royston,L., Cagno,V., Fernandes-Rocha,M., Piuz,I., Zdobnov,E., Huang,S., Constant,S., Boldi,M.O., Kaiser,L. and Tapparel,C.": {
+      "n": 1,
+      "title": "Propagation of respiratory viruses in human airway epithelia reveals persistent virus-specific signatures"
+    },
+    "Gong,Y.N., Yang,S.L., Shih,S.R., Huang,Y.C., Chang,P.Y., Huang,C.G., Kao,K.C., Hu,H.C., Liu,Y.C. and Tsao,K.C.": {
+      "n": 11,
+      "title": "Molecular evolution and the global reemergence of enterovirus D68 by genome-wide analysis"
+    },
+    "Greninger,A.L., Naccache,S.N., Clayton,A., Yu,G., Somaseka,S., Yagi,S., Glaser,C., Aldrovandi,G. and Chiu,C.Y.": {
+      "n": 1,
+      "title": "Genomic Analysis Uncovers a Novel Circulating Enterovirus D68 Strain in Association with Cases of Acute Flaccid Paralysis from 2012-2014"
+    },
+    "Greninger,A.L., Naccache,S.N., Clayton,A., Yu,G., Somasekar,S., Yagi,S., Glaser,C., Aldrovandi,G. and Chiu,C.Y.": {
+      "n": 1,
+      "title": "Genomic Analysis Uncovers a Novel Circulating Enterovirus D68 Strain in Association with Cases of Acute Flaccid Paralysis from 2012-2014"
+    },
+    "Greninger,A.L., Naccache,S.N., Yu,G., Messacar,K., Dominguez,S. and Chiu,C.Y.": {
+      "n": 1,
+      "title": "Genomic Analysis Uncovers a Novel Circulating Enterovirus D68 Strain in Association with Cases of Acute Flaccid Paralysis from 2012-2014"
+    },
+    "Greninger,A.L., Naccache,S.N., Yu,G., Messacar,K., Somasekar,S., Dominguez,S. and Chiu,C.Y.": {
+      "n": 2,
+      "title": "Genomic Analysis Uncovers a Novel Circulating Enterovirus D68 Strain in Association with Cases of Acute Flaccid Paralysis from 2012-2014"
+    },
+    "Greninger,A.L., Naccache,S.N., Yu,G., Somasekar,S., Yagi,S., Clayton,A., Glaser,C., Aldrovandi,G. and Chiu,C.Y.": {
+      "n": 1,
+      "title": "Genomic Analysis Uncovers a Novel Circulating Enterovirus D68 Strain in Association with Cases of Acute Flaccid Paralysis from 2012-2014"
+    },
+    "Hang,J., Vento,T.J., Norby,E.A., Jarman,R.G., Keiser,P.B., Kuschner,R.A. and Binn,L.N.": {
+      "n": 1,
+      "title": "Adenovirus type 4 respiratory infections with a concurrent outbreak of coxsackievirus A21 among United States Army Basic Trainees, a retrospective viral etiology study using next-generation sequencing"
+    },
+    "Hixon,A., Yu,G., Tyler,K. and Chiu,C.Y.": {
+      "n": 4,
+      "title": "Clinical isolates of Enterovirus D68 cause acute flaccid myelitis in neonatal mice"
+    },
+    "Huang,W., Wang,G., Zhuge,J., Nolan,S.M., Dimitrova,N. and Fallon,J.T.": {
+      "n": 20,
+      "title": "Whole-Genome Sequence Analysis Reveals the Enterovirus D68 Isolates during the United States 2014 Outbreak Mainly Belong to a Novel Clade"
+    },
+    "Huang,W., Yin,C., Zhuge,J., Farooq,T., Yoon,E.C., Sheila,N., Chen,D., Fallon,J.T. and Wang,G.": {
+      "n": 9,
+      "title": "Complete Genome Sequences of 9 Enterovirus D68 strains from an Upsurge in the Lower Hudson Valley, New York, 2016"
+    },
+    "Kaida,A., Iritani,N., Yamamoto,S.P., Kanbayashi,D., Togawa,M., Amo,K., Kohdera,U., Nishigaki,T., Kageyama,T. and Kubo,H.": {
+      "n": 7,
+      "title": "Reemergence of enterovirus D68 in 2015, Osaka City, Japan"
+    },
+    "Kaida,A., Kubo,H., Sekiguchi,J., Kohdera,U., Togawa,M., Shiomi,M., Nishigaki,T. and Iritani,N.": {
+      "n": 4,
+      "title": "Enterovirus 68 in children with acute respiratory tract infections, Osaka, Japan"
+    },
+    "Kaida,A., Yamamoto,S.P., Iritani,N., Togawa,M., Amo,K., Kohdera,U., Nishigaki,T., Kageyama,T. and Kubo,H.": {
+      "n": 4,
+      "title": "Reemergence of enterovirus D68 in 2013, Osaka City, Japan"
+    },
+    "Lamson,D.M., Fagan,S. and St. George,K.": {
+      "n": 10,
+      "title": "Next Generation Whole Genome Sequencing of New York State Enterovirus D68 Circulating During the 2014 Outbreak"
+    },
+    "Lednicky,J.A., Bonny,T.S., Morris,J.G. and Loeb,J.C.": {
+      "n": 1,
+      "title": "Complete Genome Sequence of Enterovirus D68 Detected in Classroom Air and on Environmental Surfaces"
+    },
+    "Lednicky,J.A., Okech,B.A., Morris,J.G. Jr., Beau De Rochars,V.M., Elbadry,M.A., White,S.K. and Loeb,J.C.": {
+      "n": 1,
+      "title": "Enterovirus D68 strain Haiti 1-2014 from the blood of a Haitian child with febrile illness"
+    },
+    "Lopez-Martinez,I., Torres-Longoria,B., Barrera-Badillo,G., Ruiz-Lopez,A., Fierro-Valdez,M.A., Ortiz-Alcantara,J.M., Garces-Ayala,F., Gonzalez-Villa,M., Escobar-Escamilla,N., Ramirez-Gonzalez,J.E. and Diaz-Quinonez,J.A.": {
+      "n": 2,
+      "title": "First whole genome sequencing of Enterovirus D68 circulating in Mexico, 2014"
+    },
+    "Lu,Q.-B. and Liu,W.": {
+      "n": 1,
+      "title": "Complete genome of enterovirus D68 in a children with pneumonia"
+    },
+    "McDermid,A.K., Grudeski,E., Mandes,R., Huzarewich,R., Gusdal,M. and Booth,T.F.": {
+      "n": 1,
+      "title": "Genetic Analysis of Enterovirus D68 strains from a North American outbreak"
+    },
+    "McDermid,A.K., Grudeski,E., Wilcox,M., Mandes,R. and Booth,T.F.": {
+      "n": 39,
+      "title": "Genetic Analysis of Enterovirus D68 strains from a North American outbreak"
+    },
+    "Ng,T.F.F., Castro,C.J., Reynolds,E. and Nix,W.A.": {
+      "n": 13,
+      "title": "Whole genomes and evolutionary history of Enterovirus D68 (EV-D68)"
+    },
+    "Ng,T.F.F., Castro,C.J., Schmidt,A., Reynolds,E., Chern,S.-W.W., Ciomperlik,J. and Nix,W.A.": {
+      "n": 3,
+      "title": "Advanced molecular detection of Enterovirus D68"
+    },
+    "Ng,T.F.F., Chern,S.-W.W., Reynolds,E., Castro,C.J. and Nix,W.A.": {
+      "n": 29,
+      "title": "Whole genomes and evolutionary history of Enterovirus D68 (EV-D68)"
+    },
+    "Ng,T.F.F., Montmayeur,A., Castro,C.J., Rogers,S.L., Chern,S.-W., Maher,K., Magana,L., Marine,R., Lamson,D., St. George,K., Oberste,M.S. and Nix,W.A.": {
+      "n": 3,
+      "title": "Detection and Genomic Characterization of Enterovirus D68 in Respiratory Samples from Three Acute Flaccid Myelitis Cases in 2016"
+    },
+    "Ng,T.F.F., Montmayeur,A., Chern,S.-W., Maher,K., Rogers,S., Castro,C., Oberste,S. and Nix,A.": {
+      "n": 110,
+      "title": "Next-generation Sequencing of Enterovirus D68"
+    },
+    "Ng,T.F.F., Reynolds,E., Castro,C.J. and Nix,W.A.": {
+      "n": 38,
+      "title": "Whole genomes and evolutionary history of Enterovirus D68 (EV-D68)"
+    },
+    "Nguyen,N.N.": {
+      "n": 10,
+      "title": "Direct Submission"
+    },
+    "Pabbaraju,K., Wong,S., Zarra,D., Gill,K., Drews,S., Tipples,G. and Tellier,R.": {
+      "n": 4,
+      "title": "Genetic characterization of enterovirus 68 strains in Alberta, Canada in 2014"
+    },
+    "Pakala,S.B., Tan,Y., Hassan,F., Selvarangan,R., Mai,A., Markowitz,R.H., Shilts,M.H., Rajagopala,S.V. and Das,S.R.": {
+      "n": 17,
+      "title": "Complete genome sequences of Enterovirus D68 viruses from 2018 outbreak in USA"
+    },
+    "Pan,C.-Y., Huynh,T., Padilla,T., Ng,T.F.F., Castro,C.J., Marine,R.L., Nix,W.A. and Wadford,D.A.": {
+      "n": 17,
+      "title": "Enterovirus D68 genomes from California, September to December 2014"
+    },
+    "Pan,C.-Y., Padilla,T., Huynh,T., Castro,C.J., Marine,R.L., Ng,T.F.F., Nix,W.A. and Wadford,D.A.": {
+      "n": 1,
+      "title": "Enterovirus D68 from California, 2016"
+    },
+    "Pan,C.-Y., Padilla,T., Huynh,T., Castro,C.J., Ng,T.F.F., Marine,R.L., Nix,W.A. and Wadford,D.A.": {
+      "n": 1,
+      "title": "Enterovirus D68 partial genome from California, 2018"
+    },
+    "Pan,C.-Y., Padilla,T., Huynh,T., Chen,A., Castro,C.J., Marine,R.L., Ng,T.F.F., Nix,W.A. and Wadford,D.A.": {
+      "n": 2,
+      "title": "Enterovirus D68 sequences from Respiratory Samples of Acute Flaccid Myelitis (AFM) cases in California, 2016-2018"
+    },
+    "Shen,L., Gong,C., Xiang,Z., Zhang,T., Li,M., Li,A., Luo,M. and Huang,F.": {
+      "n": 24,
+      "title": "Upsurge of Enterovirus D68 and Circulation of the New Subclade D3 and Subclade B3 in Beijing, China, 2016"
+    },
+    "Shen,L., Zhang,T. and Huang,F.": {
+      "n": 2,
+      "title": "Enterovirus D68 causeing pneumonia with myocardial injury in China"
+    },
+    "Smura,T.P., Junttila,N., Blomqvist,S., Norder,H., Kaijalainen,S., Paananen,A., Magnius,L.O., Hovi,T. and Roivainen,M.": {
+      "n": 1,
+      "title": "Enterovirus 94, a proposed new serotype in human enterovirus species D"
+    },
+    "Takeuchi,S.": {
+      "n": 2,
+      "title": "Metagenomic analysis using next-generation sequencing of pathogens in bronchoalveolar lavage fluid from pediatric patients with respiratory failure"
+    },
+    "Todd,A.K., Hall,R.J., Wang,J., Peacey,M., McTavish,S., Rand,C.J., Stanton,J.A., Taylor,S. and Huang,Q.S.": {
+      "n": 1,
+      "title": "Detection and whole genome sequence analysis of an enterovirus 68 cluster"
+    },
+    "Tokarz,R., Firth,C., Madhi,S.A., Howie,S.R., Wu,W., Sall,A.A., Haq,S., Briese,T. and Lipkin,W.I.": {
+      "n": 1,
+      "title": "Worldwide emergence of multiple clades of enterovirus 68"
+    },
+    "Wang,G., Zhue,J., Gilrane,V.L., Huang,W., Changhong,C., Budhai,A., Engel,H., Pascual,A., Nolan,S.M. and Fallon,J.T.": {
+      "n": 1,
+      "title": "Direct Submission"
+    },
+    "Wang,G., Zhuge,J., Huang,W., Nolan,S.M., Gilrane,V.L., Yin,C., Dimitrova,N. and Fallon,J.T.": {
+      "n": 13,
+      "title": "A New Subclade of Enterovirus D68 Circulating in the US and Causing an Outbreak in the Lower Hudson Valley, New York in 2016"
+    },
+    "Wang,H., Tao,K., Tsun,G., Li,T., Tian,Q., Hong,K., Yeung,A., Chen,Z., Chan,P., Leung,T. and Chan,R.": {
+      "n": 8,
+      "title": "Whole genome sequencing molecular epidemiology study of Enterovirus D68 detected in hospitalized children in Hong Kong with serious respiratory disease"
+    },
+    "Wang,Y., Zhao,Y., Lu,R., Li,Y. and Tan,W.": {
+      "n": 1,
+      "title": "Direct Submission"
+    },
+    "Wylie,K.M., Wylie,T.N. and Storch,G.A.": {
+      "n": 2,
+      "title": "Direct Submission"
+    },
+    "Wylie,K.M., Wylie,T.N., Orvedahl,A., Buller,R.S., Herter,B.N., Magrini,V., Wilson,R.K. and Storch,G.A.": {
+      "n": 1,
+      "title": "Genome sequence of enterovirus d68 from st. Louis, missouri, USA"
+    },
+    "Xiang,Z. and Wang,J.": {
+      "n": 2,
+      "title": "Clades of enterovirus D68 infection, China, 2006-2014"
+    },
+    "Xiang,Z., Li,L., Lei,X., Zhou,H., Zhou,Z., He,B. and Wang,J.": {
+      "n": 1,
+      "title": "Enterovirus 68 3C Protease Cleaves TRIF To Attenuate Antiviral Responses Mediated by Toll-Like Receptor 3"
+    },
+    "Xiao,Q., Ren,L., Zheng,S., Wang,L., Xie,X., Deng,Y., Zhao,Y., Zhao,X., Luo,Z., Fu,Z., Huang,A. and Liu,E.": {
+      "n": 1,
+      "title": "Prevalence and molecular characterizations of enterovirus D68 among children with acute respiratory infection in China between 2012 and 2014"
+    },
+    "Xiao,Q., Zheng,S., Wang,L., Ren,L. and Liu,E.": {
+      "n": 12,
+      "title": "Direct Submission"
+    },
+    "Yadav,P.D.": {
+      "n": 1,
+      "title": "Molecular characterization of Enterovirus D68 from India"
+    },
+    "Yip,C.C.Y., Lo,J.Y.C., Sridhar,S., Lung,D.C., Luk,S., Chan,K.H., Chan,J.F.W., Cheng,V.C.C., Woo,P.C.Y., Yuen,K.Y. and Lau,S.K.P.": {
+      "n": 3,
+      "title": "First Report of a Fatal Case Associated with EV-D68 Infection in Hong Kong and Emergence of an Interclade Recombinant in China Revealed by Genome Analysis"
+    },
+    "Zhang,T.": {
+      "n": 13,
+      "title": "The laboratory diagnosis of a severe pneumonia associated with Enterovirus D68"
+    }
+  },
+  "color_options": {
+    "age": {
+      "key": "age",
+      "legendTitle": "Host Age (years)",
+      "menuItem": "Host age",
+      "type": "continuous"
+    },
+    "age_range1": {
+      "color_map": [
+        [
+          "<1y",
+          "#d7191c"
+        ],
+        [
+          "1-5y",
+          "#fdae61"
+        ],
+        [
+          "6-17y",
+          "#ffd11a"
+        ],
+        [
+          "18-64y",
+          "#abd9e9"
+        ],
+        [
+          ">=65y",
+          "#2c7bb6"
+        ]
+      ],
+      "key": "age_range1",
+      "legendTitle": "Age range",
+      "menuItem": "Age range 1",
+      "type": "discrete"
+    },
+    "age_range2": {
+      "color_map": [
+        [
+          "<18y",
+          "#d7191c"
+        ],
+        [
+          "18-64y",
+          "#ffd11a"
+        ],
+        [
+          ">=65y",
+          "#2c7bb6"
+        ]
+      ],
+      "key": "age_range2",
+      "legendTitle": "Age range",
+      "menuItem": "Age range 2",
+      "type": "discrete"
+    },
+    "age_range3": {
+      "color_map": [
+        [
+          "<18y",
+          "#d7191c"
+        ],
+        [
+          ">=18y",
+          "#2c7bb6"
+        ]
+      ],
+      "key": "age_range3",
+      "legendTitle": "Age range",
+      "menuItem": "Age range 3",
+      "type": "discrete"
+    },
+    "clade_membership": {
+      "key": "clade_membership",
+      "legendTitle": "Clade",
+      "menuItem": "Clade",
+      "type": "discrete"
+    },
+    "country": {
+      "color_map": [
+        [
+          "Japan",
+          "#996633"
+        ],
+        [
+          "Canada",
+          "#9a2219"
+        ],
+        [
+          "USA",
+          "#DC2F24"
+        ],
+        [
+          "Mexico",
+          "#dc6024"
+        ],
+        [
+          "Haiti",
+          "#f79203"
+        ],
+        [
+          "New_Zealand",
+          "#FFCC00"
+        ],
+        [
+          "Sweden",
+          "#74ee5b"
+        ],
+        [
+          "Switzerland",
+          "#2dc30e"
+        ],
+        [
+          "France",
+          "#339933"
+        ],
+        [
+          "Spain",
+          "#058360"
+        ],
+        [
+          "Belgium",
+          "#045e45"
+        ],
+        [
+          "Netherlands",
+          "#003311"
+        ],
+        [
+          "China",
+          "#511EA8"
+        ],
+        [
+          "Hong_Kong",
+          "#4928B4"
+        ],
+        [
+          "Taiwan",
+          "#4334BF"
+        ],
+        [
+          "vietnam",
+          "#527CCE"
+        ],
+        [
+          "Philippines",
+          "#528EB1"
+        ],
+        [
+          "India",
+          "#3399FF"
+        ],
+        [
+          "Kenya",
+          "#680AC7"
+        ],
+        [
+          "Tanzania",
+          "#9933FF"
+        ]
+      ],
+      "key": "country",
+      "legendTitle": "country",
+      "menuItem": "country",
+      "type": "discrete"
+    },
+    "gt": {
+      "key": "genotype",
+      "legendTitle": "Genotype",
+      "menuItem": "genotype",
+      "type": "discrete"
+    },
+    "num_date": {
+      "key": "num_date",
+      "legendTitle": "Sampling date",
+      "menuItem": "date",
+      "type": "continuous"
+    },
+    "region": {
+      "color_map": [
+        [
+          "japan_korea",
+          "#996633"
+        ],
+        [
+          "north_america",
+          "#DC2F24"
+        ],
+        [
+          "oceania",
+          "#FFCC00"
+        ],
+        [
+          "europe",
+          "#339933"
+        ],
+        [
+          "china",
+          "#511EA8"
+        ],
+        [
+          "southeast_asia",
+          "#527CCE"
+        ],
+        [
+          "south_asia",
+          "#3399FF"
+        ],
+        [
+          "africa",
+          "#9933FF"
+        ]
+      ],
+      "key": "region",
+      "legendTitle": "region",
+      "menuItem": "region",
+      "type": "discrete"
+    },
+    "symptom": {
+      "key": "symptom",
+      "legendTitle": "symptom",
+      "menuItem": "symptom",
+      "type": "discrete"
+    }
+  },
+  "filters": [
+    "country",
+    "region",
+    "clade_membership"
+  ],
+  "geo": {
+    "country": {
+      "Belgium": {
+        "latitude": 50.6407351,
+        "longitude": 4.66696
+      },
+      "Canada": {
+        "latitude": 61.0666922,
+        "longitude": -107.991707
+      },
+      "China": {
+        "latitude": 35.000074,
+        "longitude": 104.999927
+      },
+      "France": {
+        "latitude": 46.603354,
+        "longitude": 1.8883335
+      },
+      "Haiti": {
+        "latitude": 19.1399952,
+        "longitude": -72.3570971
+      },
+      "Hong_Kong": {
+        "latitude": 22.3964,
+        "longitude": 114.1095
+      },
+      "India": {
+        "latitude": 22.3511148,
+        "longitude": 78.6677428
+      },
+      "Japan": {
+        "latitude": 35.68536,
+        "longitude": 139.75309
+      },
+      "Kenya": {
+        "latitude": 1.0,
+        "longitude": 38.0
+      },
+      "Mexico": {
+        "latitude": 19.4325301,
+        "longitude": -99.1332101
+      },
+      "Netherlands": {
+        "latitude": 52.3702,
+        "longitude": 4.8952
+      },
+      "New_Zealand": {
+        "latitude": -41.500083,
+        "longitude": 172.8344077
+      },
+      "Philippines": {
+        "latitude": 12.8797,
+        "longitude": 121.774
+      },
+      "Spain": {
+        "latitude": 40.0028028,
+        "longitude": -4.0031039
+      },
+      "Sweden": {
+        "latitude": 59.6749712,
+        "longitude": 14.5208584
+      },
+      "Switzerland": {
+        "latitude": 47.00016,
+        "longitude": 8.01427
+      },
+      "Taiwan": {
+        "latitude": 23.6978,
+        "longitude": 120.9605
+      },
+      "Tanzania": {
+        "latitude": -6.0,
+        "longitude": 35.0
+      },
+      "USA": {
+        "latitude": 39.7837304,
+        "longitude": -100.4458824
+      },
+      "vietnam": {
+        "latitude": 16.16667,
+        "longitude": 107.83333
+      }
+    },
+    "region": {
+      "africa": {
+        "latitude": 4.070194,
+        "longitude": 21.824559
+      },
+      "china": {
+        "latitude": 35.000074,
+        "longitude": 104.999927
+      },
+      "europe": {
+        "latitude": 49.646237,
+        "longitude": 10.799454
+      },
+      "japan_korea": {
+        "latitude": 35.845119,
+        "longitude": 136.736386
+      },
+      "north_america": {
+        "latitude": 28.2367447,
+        "longitude": -97.738017
+      },
+      "oceania": {
+        "latitude": -25.0562891,
+        "longitude": 152.008576
+      },
+      "south_asia": {
+        "latitude": 24.485438,
+        "longitude": 76.513158
+      },
+      "southeast_asia": {
+        "latitude": 3.020567,
+        "longitude": 112.390683
+      }
+    }
+  },
+  "maintainer": [
+    "Emma Hodcroft, Richard Neher, Robert Dyrdak, Jan Albert",
+    "http://neherlab.org"
+  ],
+  "panels": [
+    "tree",
+    "map",
+    "entropy"
+  ],
+  "title": "Phylodynamics of Enterovirus D68",
+  "updated": "12 Dec 2019",
+  "virus_count": 813
+}
